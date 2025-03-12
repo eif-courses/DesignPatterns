@@ -1,0 +1,14 @@
+D:\CSharpProjektai\DesignPatterns\bin\Debug\net9.0\DesignPatterns.exe
+D:\CSharpProjektai\DesignPatterns\bin\Debug\net9.0\DesignPatterns.deps.json
+D:\CSharpProjektai\DesignPatterns\bin\Debug\net9.0\DesignPatterns.runtimeconfig.json
+D:\CSharpProjektai\DesignPatterns\bin\Debug\net9.0\DesignPatterns.dll
+D:\CSharpProjektai\DesignPatterns\bin\Debug\net9.0\DesignPatterns.pdb
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.GeneratedMSBuildEditorConfig.editorconfig
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.AssemblyInfoInputs.cache
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.AssemblyInfo.cs
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.csproj.CoreCompileInputs.cache
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.dll
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\refint\DesignPatterns.dll
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.pdb
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.genruntimeconfig.cache
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\ref\DesignPatterns.dll
