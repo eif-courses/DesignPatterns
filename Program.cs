@@ -1,53 +1,74 @@
-﻿interface IStorageStrategy
-{
-    string save(string name);
-}
+﻿using DesignPatterns.Adapter;
+using DesignPatterns.Builder;
+using DesignPatterns.Facade;
+using DesignPatterns.Factory;
+using DesignPatterns.Observer;
+using DesignPatterns.Strategy;
 
-class ClouflareStorageStrategy : IStorageStrategy
-{
-    public string save(string name)
-    {
-        return name;
-        //throw new NotImplementedException();
-    }
-}
+// Builder pattern
+var customFile = new CustomFile.Builder()
+    .Name("myprofile.png")
+    .Path("C://myprofile.png")
+    .Type(FileType.IMAGE)
+    .Size(100)
+    .Build();
 
-class FirebaseStorageStrategy : IStorageStrategy
-{
-    public string save(string name)
-    {
-        return name;
-        //throw new NotImplementedException();
-    }
-}
-
-class StorageContext
-{
-    readonly IStorageStrategy _strategy;
-
-    public StorageContext(IStorageStrategy strategy)
-    {
-        _strategy = strategy;
-    }
-
-    public string save(string name)
-    {
-        return _strategy.save(name);
-    }
-}
+var shortVideo = new CustomFile.Builder()
+    .Name("presentation.mkv")
+    .Build();
 
 
-internal class Program
-{
-    public static void Main(string[] args)
-    {
-        StorageContext context = new StorageContext(new FirebaseStorageStrategy());
-        Console.WriteLine(context.save("firebase.png"));
-        
-        context = new StorageContext(new ClouflareStorageStrategy());
-        Console.WriteLine(context.save("clouflare.png"));
-        
-    }
-}
+// Factory pattern
+
+ShapeFactory shapeFactory = new ShapeFactory();
+
+IShape cirle = shapeFactory.CreateShape(ShapeType.Circle);
+IShape rectangle = shapeFactory.CreateShape(ShapeType.Rectangle);
+IShape triangle = shapeFactory.CreateShape(ShapeType.Triangle);
+
+cirle.Draw();
+rectangle.Draw();
+triangle.Draw();
+
+
+// Strategy pattern
+StorageContext context = new StorageContext(new FirebaseStorageStrategy());
+Console.WriteLine(context.Upload(customFile.Name));
+
+context = new StorageContext(new ClouflareStorageStrategy());
+Console.WriteLine(context.Upload(shortVideo.Name));
+
+
+
+// Facade pattern 
+
+var home = new SmartHomeFacade();
+home.TurnOn();
+home.SetTemperature(25);
+home.TurnOff();
+
+// Adapter pattern
+
+Console.WriteLine("Client: Working with objects that use the Target interface:");
+var target = new CurrentServiceTarget();
+// Default metodas naujausias
+ClientForAdapterTest.ClientCode(target);
+Console.WriteLine("Client: Now I'll work with the LegacyService via the Adapter:");
+
+LegacyService legacyService = new LegacyService();
+ITarget adapter = new LegacyServiceAdapter(legacyService);
+ClientForAdapterTest.ClientCode(adapter);
+
+// Observer pattern
+
+var course = new Course("Programavimas C#");
+
+var marius = new Student("Marius");
+var ona = new Student("Ona");
+
+course.AddObserver(marius);
+course.AddObserver(ona);
+
+course.ChangeCourseName("Programvimas C# kalba");
 
 

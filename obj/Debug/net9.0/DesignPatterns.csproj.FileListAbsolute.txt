@@ -12,3 +12,4 @@ D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\refint\DesignPatterns.dll
 D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.pdb
 D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.genruntimeconfig.cache
 D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\ref\DesignPatterns.dll
+D:\CSharpProjektai\DesignPatterns\obj\Debug\net9.0\DesignPatterns.sourcelink.json
